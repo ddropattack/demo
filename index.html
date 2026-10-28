@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Let’s Get Physical: BadRAM, Battering RAM, DDRop</title>
+  <meta name="description" content="An interactive tour of BadRAM, Battering RAM and DDRop: low-cost memory interposer attacks on confidential computing (AMD SEV-SNP, Intel SGX and TDX). COSIC & DistriNet, KU Leuven.">
+  <link rel="canonical" href="https://demo.ddropattack.eu/">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Let’s Get Physical: BadRAM, Battering RAM, DDRop">
+  <meta property="og:description" content="Low-cost memory interposer attacks on confidential computing, explained in animated steps.">
+  <meta property="og:url" content="https://demo.ddropattack.eu/">
+  <meta property="og:image" content="https://demo.ddropattack.eu/assets/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preload" href="assets/fonts/inter-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/inter-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/inter-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/inter-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/barlow-condensed-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/jetbrains-mono-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="preload">
+  <div id="viewport">
+    <div id="world"></div>
+  </div>
+
+  <div id="context"></div>
+
+  <div id="help" aria-hidden="true">
+    <kbd>←</kbd><kbd>→</kbd> step · <kbd>Esc</kbd>/<kbd>↑</kbd> zoom out · <kbd>1</kbd><kbd>2</kbd><kbd>3</kbd> paper · <kbd>P</kbd> pause / resume tour · <kbd>V</kbd> demo video · <kbd>F</kbd> fullscreen · or just click around
+  </div>
+
+  <div id="demo" aria-hidden="true">
+    <div class="demo-card">
+      <div class="demo-top"><div class="demo-title"></div><button class="demo-close" type="button" aria-label="Close">&times;</button></div>
+      <div class="demo-main"><video controls playsinline preload="metadata"></video><ol class="demo-steps"></ol></div>
+      <div class="demo-keys"><kbd>Space</kbd> play/pause · <kbd>←</kbd><kbd>→</kbd> 5 s · <kbd>Esc</kbd> close · click a step to jump there</div>
+    </div>
+  </div>
+
+  <footer id="bar">
+    <nav id="chips"></nav>
+    <div id="track"></div>
+    <button id="status" type="button"></button>
+    <div id="logos">
+      <img src="assets/logos/crpf.png" alt="Cybersecurity Research Program Flanders" style="height:56px">
+      <img src="assets/logos/fwo_kleur.png" alt="FWO" style="height:36px">
+      <img src="assets/logos/LOGO_ERC-FLAG_FP.png" alt="ERC">
+    </div>
+  </footer>
+
+  <script src="content.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
